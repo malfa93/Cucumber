@@ -1,0 +1,111 @@
+Framework -
+    It gives us organized structure
+    Proper folder hierarchy
+    Single execution point
+    Separate place for different code
+
+
+We use maven as build management tool
+
+groupID - company name
+artifactID - project name
+
+main folder - for development code
+test folder - for testing code
+            - Java - For coding part
+            - Resources - for non-coding part
+
+pom.xml - to add dependency
+    It is a configuration file which is considered as a backbone of the maven project
+
+Cucumber - It supports behavioral driven development approach wherein we write our test cases specification in
+           gherkin language (plain language)
+
+           Keywords: features, background, scenario
+
+           Given - Precondition - Given user is navigated to the HRMS application
+           When - Actions - When the user enters username and password
+           And - This tage can come with every other keyword - And click on login button
+           Then - Expected output - result - Then user should be able to see dashboard page
+           Feature  - .feature - to write scenario we use feature file
+           scenario -- User story 12345 - Admin should be able to search an employee in HRMS application
+
+Acceptance criteria:
+    1) Search by ID
+    2) Search by name
+
+
+1.
+Given user opens browser and navigated to HRMS
+And user is logged in as an admin
+And user is on Employee List page
+When user enters valid employee ID
+And  user clicks on search button
+Then user see employee in the employee table
+
+2.
+Given user opens browser and navigated to HRMS
+And user is logged in as an admin
+And user is on Employee List page
+When user enters firstname and lastname
+And  user clicks on search button
+Then user see employee in the employee table
+
+
+cucumber -
+excel -
+
+
+Class 3
+
+Recap:
+Why do we use cucumber?
+    To increase transparency / to reduce communication gap
+    supports BDD Behavior Driven development (Gherkin) language - easy to understand for non-technical people also focuses on end user
+
+Feature File:
+    This is the place where you write the scenarios
+
+Step definition - to implement the code for the steps written in feature file, we use step definitions
+
+Runner class
+
+Background: it is applicable only for one feature file, here we add common steps among all the scenarios
+
+Class 4
+
+Hooks - We use hooks to provide preconditions and post conditions in cucumber
+        We should provide hooks under the package where my steps are available
+
+
+Execution order when running:
+    1-Hooks
+        2-Background
+        3-Scenario
+    4-Hooks
+
+
+Hooks vs Background
+
+Background - it is applicable to one feature file
+Hooks - It is applicable to all the feature files
+
+
+Class 5
+
+Passing the data
+Passing the data directly from feature file - Scenario
+Passing the data from @Example table from scenario outline to achieve ddt
+Passing the data from data tables
+
+
+Data tables vs examples
+Data table is applicable to just a single step
+Example table is applicable to complete scenario
+
+Class 6
+
+This Framework supports BDD and DDT (Data Driven Test).
+
+POM: Page Object Model
+
