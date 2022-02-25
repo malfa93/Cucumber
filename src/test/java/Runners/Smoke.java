@@ -22,9 +22,14 @@ import org.junit.runner.RunWith;
         // tags will identify the scenario based on the tag we provide to the feature file
         // tags can have the "or" and the "and" keywords
         //tags = "@smoke or @regression",
-        tags = "@excel",
+        tags = "@employee_Id",
         // plugins is for report generation and other purposes
-        plugin = {"pretty", "html:target/cucumber.html"}
+        //rerun: this failed.txt file holds all the scenarios that failed during execution
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json",
+                //this failed.txt file holds all the scenarios which are failed during execution
+                "rerun:target/failed.txt"}
+
+
 
 )
 

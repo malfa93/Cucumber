@@ -1,7 +1,7 @@
 Feature: Login feature
 
   Background:
-    #Given user is navigated to HRMS application
+    Given user is navigated to HRMS application
 
   @smoke @regression @sprint2
   Scenario Outline: Valid admin login

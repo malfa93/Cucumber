@@ -109,3 +109,93 @@ This Framework supports BDD and DDT (Data Driven Test).
 
 POM: Page Object Model
 
+POM allows us to create classes according to the pages available in the application
+
+Class 7
+
+implicit wait based on time, explicit wait based on condition
+
+Class 8
+
+Recap -
+Using POM to write functions in respective classes
+
+Use common methods to write common functions in it, such as:
+sendText
+click
+
+
+open the terminal in the project
+
+mvn clean
+mvn test
+mvn clean test (doing them together)
+mvn test -Dcucumber.filter.tags=“@tagName”          This is used to execute a specific tag name
+
+
+Review 2:
+
+Feature File: we write scenario is feature file
+
+Feature: The name of the feature file / User Story
+Scenario: The name of the test case
+Given: Precondition
+When: Perform some action
+And: Supporting keyword
+Then: Results
+Scenario Outline: To pass the data from example table, we use scenario outline instead of scenario
+Examples: It is a table where we provide data in key and value format
+Background: All the initial common steps across all the scenarios in the feature file will be written here
+Hooks(before and after) - pre and post condition throughout our production
+
+
+
+Steps Class: all the step definition for the feature file will be written here
+Runner Class:
+
+------------
+
+
+Java Rest Assured API: This is a Java Library used to automate Rest API
+
+Rest service allows data to be sent in JSON object
+JSON object consists of key and value pairs
+
+Rest Assured is DSL(Domain Specific Language)
+This is a java based Library we use to automate Rest Api's .
+
+Rest Assured follows behavioral driven development (BDD) approach.
+
+Given - preparing the request
+When - making the request/making the call/hitting the endpoint
+Then - response - Assertion/Verification
+
+To write sample test - get one employee - we need:
+    Base uri - url
+    end point
+    headers - token, content type
+    query parameter
+
+
+Class 2 API
+
+Recap
+sample test - getting an employee details using api
+
+Base URI - base URL
+headers - content type & authorization
+query parameter
+
+When - keyboard we use to hit the end point
+
+Then - for verification and validation
+
+@Test - junit
+
+Hamcrest Matchers-
+    Class contains methods to perform assertions
+
+JasonPath vs jsonPath()
+
+JsonPath is class
+jsonPath() is a method that belongs to JsonPath class
